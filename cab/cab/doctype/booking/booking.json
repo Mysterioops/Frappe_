@@ -8,7 +8,16 @@
   "section_break_6hqc",
   "order",
   "amended_from",
-  "driver"
+  "transport",
+  "column_break_qxek",
+  "driver",
+  "still_editable",
+  "section_break_csux",
+  "items",
+  "section_break_uflg",
+  "rate",
+  "column_break_xhgc",
+  "total_amount"
  ],
  "fields": [
   {
@@ -40,13 +49,58 @@
    "label": "Driver",
    "options": "Driver",
    "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "still_editable",
+   "fieldtype": "Data",
+   "label": "Still editable"
+  },
+  {
+   "fieldname": "column_break_qxek",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Items",
+   "options": "Ride Booking Item"
+  },
+  {
+   "fieldname": "section_break_csux",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "order.transport",
+   "fieldname": "transport",
+   "fieldtype": "Link",
+   "label": "Transport",
+   "options": "Transport"
+  },
+  {
+   "fieldname": "section_break_uflg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "label": "Rate"
+  },
+  {
+   "fieldname": "column_break_xhgc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_amount",
+   "fieldtype": "Currency",
+   "label": "Total Amount"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-02-02 20:22:13.951403",
+ "modified": "2026-02-04 00:12:13.332328",
  "modified_by": "Administrator",
  "module": "Cab",
  "name": "Booking",

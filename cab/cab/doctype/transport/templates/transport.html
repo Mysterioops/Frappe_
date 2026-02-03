@@ -1,0 +1,16 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<h1>{{ title }}</h1>
+<h2>Color: {{ color }}</h2>
+
+{% if doc.transport_image  %}
+    <img src="{{ transport_image }}" alt="{{ title }}">
+{% else %}
+    <span>No image available</span>
+{% endif %}
+
+<a class="btn btn-info" href="/order-a-ride/new?transport={{ name }}">Book a Ride</a>
+ 
+{% endblock %}
+<!-- this is a sample default web page template -->
