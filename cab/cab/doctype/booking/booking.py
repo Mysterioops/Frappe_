@@ -8,7 +8,7 @@ from frappe.model.document import Document
 class Booking(Document):
     def validate(self):
         if self.rate is None:
-            frappe.throw("Please provide a rate")
+            frappe.db.get_single_value("Cab Settings","standard_rate")
 
         total_distance = 0
         for item in self.items:

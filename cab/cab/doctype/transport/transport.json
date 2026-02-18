@@ -7,16 +7,22 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "insurance_column",
   "title",
   "make",
   "license_plate",
   "color",
+  "insurance",
+  "get_summary",
+  "summary",
   "column_break_pods",
   "model",
   "year",
   "route",
   "is_published",
-  "transport_image"
+  "transport_image",
+  "status",
+  "condition"
  ],
  "fields": [
   {
@@ -75,6 +81,37 @@
    "fieldname": "transport_image",
    "fieldtype": "Attach Image",
    "label": "Transport Image"
+  },
+  {
+   "fieldname": "insurance_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "insurance",
+   "fieldtype": "Date",
+   "label": "Insurance"
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nOut of Service\nSold\nCrushed"
+  },
+  {
+   "fieldname": "condition",
+   "fieldtype": "Rating",
+   "label": "Condition"
+  },
+  {
+   "fieldname": "get_summary",
+   "fieldtype": "Button",
+   "label": "Get Summary"
+  },
+  {
+   "fieldname": "summary",
+   "fieldtype": "HTML",
+   "label": "Summary"
   }
  ],
  "grid_page_length": 50,
@@ -82,7 +119,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "is_published",
  "links": [],
- "modified": "2026-02-04 00:50:03.529133",
+ "modified": "2026-02-09 15:08:43.981701",
  "modified_by": "Administrator",
  "module": "Cab",
  "name": "Transport",
